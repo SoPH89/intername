@@ -1,3 +1,27 @@
+<?php
+
+$page = 'index';
+session_start();
+
+// Set your desired password
+$correctPassword = "1234";
+
+// Check if the form is submitted
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Check if the entered password is correct
+    if ($_POST["password"] === $correctPassword) {
+        // Store the authentication status in the session
+        $_SESSION["authenticated"] = true;
+    } else {
+        $error_message = "Invalid password. Try again.";
+    }
+}
+
+// If the user is authenticated or not submitted, display the table
+if (isset($_SESSION["authenticated"]) && $_SESSION["authenticated"] || !isset($_POST["password"])) {
+    ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,6 +33,22 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body style="margin: 50px;">
+
+<?php if($page == 'index'): ?>
+    <script language="Javascript">
+            //prompt.
+            var password;
+            var correctPass = "intername"; 
+            password = prompt("Enter in the password:","");
+
+            if(password == correctPass) {
+                    alert('click OK to view this site');
+            } else {
+                    window.location = "http://google.com"
+            } 
+            //->
+    </script>               
+<?php endif; ?>
     <div class="container my-5"></div>
     <h1>List of leads</h1>
     <a class="btn btn-primary" href="http://localhost/intername/backoffice/create.php" role="button">New Client</a>
@@ -75,6 +115,7 @@
                 </td>
             </tr>";
             }
+        }
                 
 
 
