@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>Neogym</title>
+
+  <!-- Slider Stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+  <!-- Bootstrap Core CSS -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+  <!-- Fonts Style -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet">
+
+  <!-- Custom Styles -->
+  <link href="css/style.css" rel="stylesheet" />
+
+  <!-- Responsive Styles -->
+  <link href="css/responsive.css" rel="stylesheet" />
+</head>
+
+<body class="sub_page">
+  <div class="hero_area">
+    <!-- Header Section Starts -->
+    <header class="header_section">
+      <div class="container-fluid">
+        <!-- Navigation Bar -->
+        <nav class="navbar navbar-expand-lg custom_nav-container">
+          <a class="navbar-brand" href="index.html">
+            <span>
+              Neogym
+            </span>
+          </a>
+          <!-- Navbar Toggler Button -->
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
+              <!-- Navigation Links -->
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="why.html"> Why us </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="trainer.html"> trainers</a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="contact.html"> Contact Us</a>
+                </li>
+              </ul>
+              <!-- User Option Form -->
+              <div class="user_option">
+                <form class="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
+                  <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit"></button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- End Header Section -->
+
+  </div>
+
+  <!-- Contact Section -->
+  <section class="contact_section">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6 px-0">
+          <div class="img-box">
+            <img src="images/contact-img.jpg" alt="">
+          </div>
+        </div>
+        <div class="col-lg-5 col-md-6">
+          <div class="form_container pr-0 pr-lg-5 mr-0 mr-lg-2">
+            <div class="heading_container">
+              <h2>
+                Contact Us
+              </h2>
+            </div>
+            <!-- Contact Form -->
+            <form action="leads.php" method="post">
+              <div>
+                <input type="text" name="first_name" placeholder=" First Name" />
+              </div>
+              <div>
+                <input type="text" name="last_name" placeholder=" Last Name" />
+              </div>
+              <div>
+                <input type="email" name="email" placeholder="Email" />
+              </div>
+              <div>
+                <input type="number" name="phone" placeholder="Phone Number" />
+              </div>
+              <div>
+                <input type="text" name="note" class="message-box" placeholder="Message" />
+                <input type="hidden" name="sub_1" id="sub_1" />
+              </div>
+              <div class="d-flex contact-div-form">
+                <button>
+                  Send
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Contact Section -->
+
+  <!-- Info Section -->
+  <section class="info_section layout_padding2">
+    <div class="container">
+      <div class="info_items">
+        <!-- Location Info -->
+        <a href="">
+          <div class="item ">
+            <div class="img-box box-1">
+              <img src="" alt="">
+            </div>
+            <div class="detail-box">
+              <p>
+                Location
+              </p>
+            </div>
+          </div>
+        </a>
+        <!-- Phone Number Info -->
+        <a href="">
+          <div class="item ">
+            <div class="img-box box-2">
+              <img src="" alt="">
+            </div>
+            <div class="detail-box">
+              <p>
+                +02 1234567890
+              </p>
+            </div>
+          </div>
+        </a>
+        <!-- Email Info -->
+        <a href="">
+          <div class="item ">
+            <div class="img-box box-3">
+              <img src="" alt="">
+            </div>
+            <div class="detail-box">
+              <p>
+                demo@gmail.com
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+  <!-- End Info Section -->
+
+  <!-- Button to Open Modal -->
+  <div class="container text-center mt-3">
+    <!-- Remove the button since the modal will be triggered based on the query string -->
+  </div>
+
+  <!-- Bootstrap Modal -->
+  <div class="modal" id="myModal">
+      <div class="modal-dialog">
+          <div class="modal-content">
+
+              <!-- Modal Header -->
+              <div class="modal-header">
+                  <h4 class="modal-title">Form Submitted</h4>
+              </div>
+
+              <!-- Modal Body -->
+              <div class="modal-body">
+                  <p id="modal-message">Thank you {Full Name}, we’ll contact you soon</p>
+              </div>
+
+              <!-- Modal Footer -->
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" onclick="closeModal()" data-dismiss="modal">Close</button>
+              </div>
+
+          </div>
+      </div>
+  </div>
+
+  <!-- Bootstrap JS and Popper.js -->
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="js/bootstrap.js"></script>
+
+  <!-- Script to Open Modal based on Query String -->
+  <script>
+      // Get the URL parameters
+      const urlParams = new URLSearchParams(window.location.search);
+      if (urlParams.has('sub_1') && urlParams.get('sub_1') != '') {
+          // Set the message with a sample full name
+          const sub_1 = urlParams.get('sub_1');
+          var inputField = document.getElementById("sub_1");
+          inputField.value = sub_1;
+      }
+
+      // Function to check for query string parameter and open the modal
+      function show_modal_after_successfully_submitted(urlParams) {
+          // Check if the 'lead' parameter is present and has the value 'succeed'
+          if (urlParams.has('lead') && urlParams.get('lead') === 'succeed') {
+              // Set the message with a sample full name
+              const fullName = urlParams.get('name');
+              document.getElementById('modal-message').innerText = "Thank you " + fullName + ", we’ll contact you soon";
+
+              // Open the Bootstrap modal
+              $('#myModal').modal('show');
+          }
+      }
+
+      // Call the function on page load
+      show_modal_after_successfully_submitted(urlParams);
+
+      function check_email_exists(urlParams) {
+        // Check if the 'lead' parameter is present and has the value 'email_exists'
+        if (urlParams.has('lead') && urlParams.get('lead') === 'email_exists') {
+            // Create the notification HTML
+            const notificationHTML = '<p class="email_exists_notification">Sorry, this email is already registered</p>';
+
+            // Find the contact-div-form element
+            const contactDivForm = document.querySelector('.contact-div-form');
+            
+            // Check if the contactDivForm is found
+            if (contactDivForm) {
+                // Insert the notification HTML after the closing tag of contactDivForm
+                contactDivForm.insertAdjacentHTML('afterend', notificationHTML);
+            }
+        }
+      }
+
+      // Call the function on page load
+      check_email_exists(urlParams);
+
+      function closeModal() {
+        // Close the Bootstrap modal
+        $('#myModal').modal('hide');
+
+        // Remove query parameters from the URL
+        history.replaceState({}, document.title, window.location.pathname);
+      }
+  </script>
+
+
+  <!-- Footer Section -->
+  <footer class="container-fluid footer_section">
+    <p>
+      &copy; 2020 All Rights Reserved. Design by
+      <a href="https://html.design/">Free Html Templates</a>
+    </p>
+  </footer>
+  <!-- End Footer Section -->
+
+  <!-- jQuery and Bootstrap JS -->
+  <!-- <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/bootstrap.js"></script> -->
+
+</body>
+
+</html>
