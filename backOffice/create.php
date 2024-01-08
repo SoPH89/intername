@@ -141,7 +141,7 @@ if(!empty($errorMessage)){
     <div class="row mb-3">
         <label class="col-sm-3 col-form-label">Called</label>
         <div class="col-sm-6">
-            <input type="text" class="form-control" name="called" value="<?php echo $called; ?>">
+            <input type="number" min="0" max="1" class="form-control" name="called" value="<?php echo $called; ?>">
         </div>
     <div class="row mb-3">
         <label class="col-sm-3 col-form-label">Created_at</label>

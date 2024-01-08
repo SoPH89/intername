@@ -70,7 +70,7 @@ if($_SERVER['REQUEST_METHOD'] == 'GET'){
     $created_at = $_POST["created_at"];
     
     do{
-            if(empty($id) || empty($firstName) || empty($lastName) || empty($email) || empty($phoneNumber) || empty($ip) || empty($country) || empty($url) || empty($note) || empty($sub_1) || empty($called) || empty($created_at)){
+            if(empty($id) || empty($firstName) || empty($lastName) || empty($email) || empty($phoneNumber) || empty($ip) || empty($country) || empty($url) || empty($note) || empty($sub_1)  || empty($created_at)){
         $errorMessage = "All the fields are required";
         break;
     }
@@ -171,7 +171,7 @@ if(!empty($errorMessage)){
     <div class="row mb-3">
         <label class="col-sm-3 col-form-label">Called</label>
         <div class="col-sm-6">
-            <input type="text" class="form-control" name="called" value="<?php echo $called; ?>">
+            <input type="text" class="form-control" name="called" min="0" max="1" value="<?php echo $called; ?>">
         </div>
     <div class="row mb-3">
         <label class="col-sm-3 col-form-label">Created_at</label>
