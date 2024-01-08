@@ -4,7 +4,7 @@ $page = 'index';
 session_start();
 
 // Set your desired password
-$correctPassword = "1234";
+$correctPassword = "intername";
 
 // Check if the form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -40,6 +40,7 @@ if (isset($_SESSION["authenticated"]) && $_SESSION["authenticated"] || !isset($_
                 password = prompt("Enter in the password:","");
                 if(password == correctPass) {
                     alert('click OK to view this site');
+                     <?php $_SESSION["password_entered"] = true; ?>
                 } else {
                     window.location = "http://google.com";
                 } 
